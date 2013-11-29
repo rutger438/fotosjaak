@@ -1,0 +1,175 @@
+*
+
+{
+	margin:0px;
+	padding:0px;
+}
+input {
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+}
+
+input:focus 
+{
+    box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(100, 100, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    border:1px solid rgba(1000,100,255, 0.8); 
+}
+select {
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+}
+
+select:focus 
+{
+    box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(100, 100, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    border:1px solid rgba(1000,100,255, 0.8); 
+	overflow:hidden;
+	-webkit-appearance: none;
+	background: url(../images/select_arrow.png) no-repeat right #ddd;
+}
+button
+{
+	color: white;
+	width:100%;
+	height:30px;
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+	background-color:#212628;
+}
+button:hover
+{
+    box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(100, 100, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(100, 100, 255, 1);
+    border:1px solid rgba(1000,100,255, 0.8); 
+}
+body
+{
+	min-width:620px;
+    height: 100%;
+	font-family:'Source Sans Pro', sans-serif;
+	background-color:LightBlue;
+	color:black;
+	font-size:1.0em;
+	border:0px;
+	margin:0px;
+}
+html
+{
+    height: 100%;
+	border:0px;
+}
+div#sidebar
+{
+	color: white;
+	min-width:150px;
+    float: left;
+    width: 15%;
+    background: #212628;
+    height: 100%;
+position: fixed;
+
+}
+
+div#container
+{
+	min-width:500px;
+	background-color:white;
+	width:60%;
+	margin:0px auto;
+	min-height:78%;
+	position:relative;
+}
+div#white
+{
+	margin: 0px auto;
+	background-color:White;
+	width:60%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;	
+	height: 20%;
+	position: relative;
+}
+div#banner
+{	
+	position:absolute;
+	margin: 1% 1%;
+	width:98%;
+	background-color:Red;
+	background-image:url(../images/jumbo.png);
+	background-position: 20px 20px;
+	background-repeat:no-repeat;
+	height:98%;
+	border-radius: 20px;
+}
+div#accgeg
+{
+	position: relative;
+	width: 300px;
+	text-align:left;
+}
+div#content
+{
+	min-width:500px;
+	min-height:100%;
+	margin:0px 0px;
+	position:relative;
+}
+div#footer
+{
+	margin:0px auto;
+	position: absolute; 
+	bottom: 0;
+	width:100%;
+	max-height:40px;
+	background-color:#FF9955;
+	text-align:center;
+}
+div#link
+{
+	width:100%;
+	background:#212628;
+	height:200px;
+	list-style-type: none;
+}
+div#downloads
+{
+	position:middle;
+	text-align:center;
+}
+div#acc
+{
+	min-width:150px;
+	color:white;
+	background:#212628;
+	width:100%;
+	height:15%;
+	list-style-type: none;
+	position:relative;
+}
+div#accbuttons
+{
+	width:100%;
+	margin: 20px auto;
+}
+div#link ul { list-style-type: none; }
