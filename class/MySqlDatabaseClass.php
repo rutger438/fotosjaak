@@ -36,6 +36,7 @@ class MySqlDatabaseClass
 
 // Maak nu een object (instantie) van de MySqlDatabaseClass
 $database = new MySqlDatabaseClass();
+/*
 echo "<h3>Dit is de testpagina voor mijn database class<h3><hr>";
 
 // We gaan alle records uit de tabel faq selecteren
@@ -46,4 +47,5 @@ while ($row = mysql_fetch_array($result))
 {
     echo $row['email']."<br>";
 }
+*/
 ?>
