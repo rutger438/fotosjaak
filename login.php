@@ -2,10 +2,10 @@
 			<table border='0'>
 				<tr>
 					<td>
-						Gebruikersnaam
+						Email
 					</td>
 					<td>
-						<input type="text" name="username" />
+						<input type="text" name="email" />
 					</td>
 				</tr>
 				<tr>

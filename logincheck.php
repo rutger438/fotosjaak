@@ -1,31 +1,56 @@
 <?php
-$passwordcheck = NULL;
-$positioncheck = NULL;
-mysql_connect("localhost", "root", "", "am1b") or die("1");
-	$user = mysql_real_escape_string($_POST['username']);
-	$pass = mysql_real_escape_string($_POST['password']);
-	if ($user=="" || $pass=="")
-	{
-			 echo "Gebruikersnaam of wachtwoord is leeg.";
-		 header("refresh:4; url=index.php?content=login");
-		 exit();
-	}
-	mysql_query("use am1b") or die ("2");
-	$result = mysql_query("SELECT password, position FROM users WHERE user_name = '$user'") or die ("3");
-		while ($row = mysql_fetch_array($result)) {
-			$passwordcheck = $row['password'];
-			$positioncheck = $row['position'];
-			}
-		if ($pass==$passwordcheck)
-		{
-		echo "bezig met inloggen...";
-		$_SESSION['accuser'] = $user;
-		$_SESSION['position'] = $positioncheck;
-		header("refresh:2; url=index.php?content=$positioncheck");
-		}
-		else
-		{
-		 echo "Gebruikersnaam of wachtwoord is ongeldig.";
-		 header("refresh:4; url=index.php?content=login");
-		}
+require_once("class/LoginClass.php");
+
+// Check of de loginformulier velden wel zijn ingevuld
+if (!empty($_POST['email']) && !empty($_POST['password']))
+{
+    /* Check in de database of beide ingevoerde waarden in
+     * het loginformulier wel bestaan in de login tabel
+     * Tussen de haakjes van het onderstaande if-statement
+     * moet true of false komen te staan. We schrijven daarvoor
+     * een method in de LoginClass class.
+     * Een static method uit een class kan worden aangeroepen
+     * met: de naam van de class gevolgd door dan een
+     * dubbele dubbele punt gevold door de naam van de method.
+     */
+    if (LoginClass::check_if_email_password_exists($_POST['email'],
+        $_POST['password']))
+    {
+        /* Vind de logingegevens van de user die inlogt. Je krijgt
+         * een loginClass object terug. En je kan dus de properties
+         * getLogin() en getUserrole() opvragen.		 *
+         */
+        $user = LoginClass::find_login_user($_POST['email'],
+            $_POST['password']);
+
+        $_SESSION['id']			= $user->getLogin_id();
+        $_SESSION['userrole']	= $user->getUserrole();
+
+        switch ($_SESSION['userrole'])
+        {
+            case 'customer':
+                header("location:index.php?content=customer_homepage");
+                break;
+            case 'admin':
+                header("location:index.php?content=admin_homepage");
+                break;
+            case 'root':
+                header("location:index.php?content=root_homepage");
+                break;
+        }
+    }
+    else
+    {
+        echo "Gebruikersnaam en/of wachtwoord niet bekent";
+        header("refresh:4; url=index.php?content=login");
+    }
+}
+else
+{
+    //Stuur door naar login met foutmelding
+    echo "U heeft een of meerdere velden niet ingevuld";
+    header("refresh:4; url=index.php?content=login");
+}
+
+
 ?>
