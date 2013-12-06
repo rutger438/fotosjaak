@@ -11,6 +11,14 @@
         private $isactivated;
         private $registerdate;
 
+        //properties
+        //getter voor login id
+        public function getLogin_id(){ return $this->login_id; }
+        public function getEmail(){ return $this->email; }
+        public function getPassword(){ return $this->password; }
+        public function getUserrole(){ return $this->userrole; }
+        public function getIsactivated(){ return $this->isactivated; }
+        public function getRegisterdate(){ return $this->registerdate; }
         //Constructor van LoginClass
         public function __construct()
         {
@@ -34,14 +42,17 @@
             {
                 // Alle lokale values vullen met de values uit de database
                 $object = new LoginClass();
-                $this->login_id     = $row['login_id'];
-                $this->email        = $row['email'];
-                $this->password     = $row['password'];
-                $this->userrole     = $row['userrole'];
-                $this->isactivated  = $row['isactivated'];
-                $this->registerdate = $row['registerdate'];
+                $object->login_id     = $row['login_id'];
+                $object->email        = $row['email'];
+                $object->password     = $row['password'];
+                $object->userrole     = $row['userrole'];
+                $object->isactivated  = $row['isactivated'];
+                $object->registerdate = $row['registerdate'];
+
+                //stop het $object gemaakt van LoginClass in het object array genaamd $object_array
+                $object_array[] = $object;
             }
+            return $object_array;
         }
     }
 ?>
-dit is de login class

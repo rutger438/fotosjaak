@@ -9,9 +9,6 @@
         <button onClick="window.location='./index.php?content=faq'">FAQ</button>
     </li>
     <li>
-        <button onClick="window.location='./index.php?content=class/MySqlDatabaseClass'">test db class</button>
-    </li>
-    <li>
-        <button onClick="window.location='./index.php?content=class/LoginClass'">test login class</button>
+        <button onClick="window.location='./index.php?content=loginClassTest'">LoginClassTest</button>
     </li>
 </ul>
