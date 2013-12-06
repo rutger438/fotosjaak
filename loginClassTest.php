@@ -7,10 +7,10 @@
 
     $query = "SELECT * FROM `login`";
 
-    $result = $login->find_by_sql($query);
+    $result = $login::find_by_records($query);
 
     foreach ($result as $value)
     {
         echo $value->getLogin_id()." | ".$value->getEmail()." | ".$value->getPassword()." | ".$value->getUserrole()." | ".$value->getIsactivated()." | ".$value->getRegisterdate()."<br>";
-    }
+}
 ?>

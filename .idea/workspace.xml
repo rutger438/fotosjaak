@@ -62,8 +62,10 @@
       <file leaf-file-name="LoginClass.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/LoginClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="725" selection-end="725" vertical-scroll-proportion="-12.173913" vertical-offset="0" max-vertical-offset="882">
-              <folding />
+            <state line="60" column="68" selection-start="2288" selection-end="2288" vertical-scroll-proportion="-20.086956" vertical-offset="0" max-vertical-offset="602">
+              <folding>
+                <element signature="n#find_by_sql#0;n#LoginClass#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +82,7 @@
       <file leaf-file-name="loginClassTest.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginClassTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="184" selection-start="468" selection-end="468" vertical-scroll-proportion="0.3127148" vertical-offset="0" max-vertical-offset="582">
+            <state line="9" column="22" selection-start="224" selection-end="224" vertical-scroll-proportion="0.21649484" vertical-offset="0" max-vertical-offset="582">
               <folding />
             </state>
           </provider>
@@ -283,7 +285,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -418,14 +420,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/LoginClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="725" selection-end="725" vertical-scroll-proportion="-12.173913" vertical-offset="0" max-vertical-offset="882">
-          <folding />
+        <state line="60" column="68" selection-start="2288" selection-end="2288" vertical-scroll-proportion="-20.086956" vertical-offset="0" max-vertical-offset="602">
+          <folding>
+            <element signature="n#find_by_sql#0;n#LoginClass#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginClassTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="184" selection-start="468" selection-end="468" vertical-scroll-proportion="0.3127148" vertical-offset="0" max-vertical-offset="582">
+        <state line="9" column="22" selection-start="224" selection-end="224" vertical-scroll-proportion="0.21649484" vertical-offset="0" max-vertical-offset="582">
           <folding />
         </state>
       </provider>

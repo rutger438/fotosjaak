@@ -54,5 +54,12 @@
             }
             return $object_array;
         }
+
+        public function find_by_records()
+        {
+            $query = "SELECT * FROM `login`";
+            //static methods worden aangeroepen met een dubbele punt
+            return self::$this->find_by_sql($query);
+        }
     }
 ?>
