@@ -34,7 +34,6 @@ class SessionClass {
     {
         session_destroy();
         $this->logged_in = false;
-
     }
 }
 $session = new SessionClass();

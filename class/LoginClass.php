@@ -130,13 +130,16 @@
                       where `email`  = '".$email."'
                       and `password` = '".$password."'";
             $user_array = self::find_by_sql($query);
+
             return array_shift($user_array);
+
             if($user->getIsactivated() == 'yes')
             {
                 return true;
             }else{
-                return false;
+                return false:
             }
         }
 }
+
 ?>
