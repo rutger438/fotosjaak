@@ -18,15 +18,24 @@ class SessionClass {
   //Constructor
     public function __construct()
     {
-
-
+        session_start();
     }
 
   //Method Login
     public function login($loginClassObject)
-    [
-        $this->id = $loginClassObject->get_login_id();
+    {
+        $this->id           = $_SESSION['id']           = $loginClassObject->getLogin_id();
+        $this->email        = $_SESSION['email']        = $loginClassObject->getEmail();
+        $this->userrole     = $_SESSION['userrole']     = $loginClassObject->getUserrole();
+        $this->logged_in    = $_SESSION['logged_in']    = true;
+    }
 
-    ]
+    public function logout()
+    {
+        session_destroy();
+        $this->logged_in = false;
+
+    }
 }
+$session = new SessionClass();
 ?>

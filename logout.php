@@ -1,6 +1,5 @@
 <?php
-unset ($_SESSION['accuser']);
-unset ($_SESSION['position']);
-echo "bezig met uit loggen...";
-header("refresh:2; url=index.php");
+require_once("class/SessionClass");
+$session->logout();
+header("location:index.php?content=homepage");
 ?>
