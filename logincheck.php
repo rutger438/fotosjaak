@@ -29,13 +29,13 @@ if (!empty($_POST['email']) && !empty($_POST['password']))
         switch ($_SESSION['userrole'])
         {
             case 'customer':
-                header("location:index.php?content=customer_homepage");
+                header("location:index.php?content=customer");
                 break;
             case 'admin':
-                header("location:index.php?content=admin_homepage");
+                header("location:index.php?content=admin");
                 break;
             case 'root':
-                header("location:index.php?content=root_homepage");
+                header("location:index.php?content=root");
                 break;
         }
     }
