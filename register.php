@@ -1,4 +1,5 @@
 <?php
+	require_once('class/LoginClass.php');
 	//Met var_dump kun je zien welke variabelen namen en waarden
 	//er verstuurd worden.
 	
@@ -9,7 +10,9 @@
 			or die("Er is geen contact met de mysql-server");
 	
 	//Selecteer een database op de mysql-server
-	mysql_select_db("am1b", $db) or die("Database niet gevonden");
+	mysql_select_db("am1b-fotosjaak", $db) or die("Database niet gevonden");
+	
+	LoginClass::insert_into_loginClass($_POST['email']);
 	
 	//Een sql opdracht die een record naar de tabel users wegschrijft
 	$sql = "INSERT INTO `users` (

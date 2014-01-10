@@ -155,6 +155,45 @@
 				return false;
 			}
 		}
+		public static function insert_into_loginClass($email)
+		{
+			global $database;
+			
+			$date = date("Y-m-d H:i:s");
+			$temp_password = MD5($email.$date);
+			
+			$query = "INSERT INTO `login` (`login_id`,
+										   `email`,
+										   `password`,
+										   `userrole`,
+										   `isactivated`,
+										   `registerdate`)
+								VALUES	  (NULL,
+								           '".$email."',
+										   '".$temp_password."',
+										   'customer',
+										   'no',
+										   '".$date."')";
+										   //echo $query;
+			$database->fire_query($query);
+			
+			$query = "INSERT INTO `user` (`user_id`,
+			`							  `firstname`,
+										  `infix`,
+										  `surename`,
+										  `address`,
+										  `addressnumber`,
+										  `city`,
+										  `zipcode`,
+										  `country`,
+										  `phonenumber`,
+										  `mobilephonenumber`)
+					  VALUES 			  (
+					  					  '',
+					  					  '',
+					  					  '')";
+			
+		}
 }
 
 ?>
