@@ -53,5 +53,5 @@
 	
 	echo "Uw gegevens zijn opgeslagen in de database. U wordt doorgestuurd naar
 		  de vorige pagina";	
-	//header("refresh:4; url=index.php");	
+	header("refresh:4; url=index.php");	
 ?>
